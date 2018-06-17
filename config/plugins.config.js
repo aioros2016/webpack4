@@ -14,13 +14,13 @@ const pluginsConfig = [
         template: './src/index.html',
         filename: 'index.html',
         hash: true,
-        chunks: ['lodash', 'index1']
+        chunks: ['commons', 'index1']
     }),
     new HtmlWebpackPlugin({
         template: './src/index2.html',
         filename: 'index2.html',
         hash: true,
-        chunks: ['jquery', 'index2']
+        chunks: ['commons', 'index2']
     }),
     new webpack.HotModuleReplacementPlugin(),
     new ExtractTextPlugin({filename: 'css/[name].optimize.css'}),
@@ -37,10 +37,10 @@ const pluginsConfig = [
         from: path.resolve(__dirname, '../src/assets'),
         to: './public'
     }]),
-    new webpack.ProvidePlugin({
-        lodash: 'lodash',
-        jquery: 'jquery'
-    })
+    // new webpack.ProvidePlugin({
+    //     lodash: 'lodash',
+    //     jquery: 'jquery'
+    // })
 ]
 
 module.exports = pluginsConfig

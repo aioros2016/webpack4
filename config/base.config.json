@@ -1,6 +1,4 @@
 {
   "entry1": "./src/index1.js",
-  "entry2": "./src/index2.js",
-  "library1": "lodash",
-  "library2": "jquery"
+  "entry2": "./src/index2.js"
 }
