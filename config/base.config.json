@@ -1,4 +1,5 @@
 {
   "entry1": "./src/index1.js",
-  "entry2": "./src/index2.js"
+  "entry2": "./src/index2.js",
+  "entry3": "./src/index3.js"
 }
