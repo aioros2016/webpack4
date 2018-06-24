@@ -40,7 +40,14 @@ const rules = {
         },
         {
             test:/\.(js|jsx)$/,
-            use:['babel-loader'],
+            use:[
+                {
+                    loader: 'babel-loader',
+                    query: {
+                        presets: ['es2015'],
+                        plugins: ['syntax-dynamic-import']
+                    }                }
+            ],
             include: /src/,
             exclude:/node_modules/
         }

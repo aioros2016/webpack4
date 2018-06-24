@@ -15,22 +15,22 @@ const pluginsConfig = [
         filename: 'index.html',
         hash: true,
         // excludeChunks: ['index1', 'index2', 'index3']
-        // chunks: ['index1', 'jquery']
+        chunks: ['runtime', 'commons', 'index1']
     }),
     new HtmlWebpackPlugin({
         template: './src/index2.html',
         filename: 'index2.html',
         hash: true,
         // excludeChunks: ['index1', 'index2', 'index3']
-        // chunks: ['jquery', 'index2']
+        chunks: ['runtime', 'commons', 'index2']
     }),
-    new HtmlWebpackPlugin({
-        template: './src/index3.html',
-        filename: 'index3.html',
-        hash: true,
-        // excludeChunks: ['index1', 'index2', 'index3', 'jquery']
-        // chunks: ['index3']
-    }),
+    // new HtmlWebpackPlugin({
+    //     template: './src/index3.html',
+    //     filename: 'index3.html',
+    //     hash: true,
+    //     excludeChunks: ['index1', 'index2', 'index3', 'jquery']
+    //     chunks: ['index2']
+    // }),
     new webpack.HotModuleReplacementPlugin(),
     new ExtractTextPlugin({filename: 'css/[name].optimize.css'}),
     new OptimizeCssAssetsPlugin({
