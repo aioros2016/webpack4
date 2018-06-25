@@ -12,3 +12,5 @@ yarn-error.log*
 *.njsproj
 *.sln
 src/assets/images/bg.jpg
+.idea/workspace.xml
+yarn.lock
