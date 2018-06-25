@@ -25,11 +25,10 @@ const pluginsConfig = [
         chunks: ['runtime', 'commons', 'jquery', 'commonsAsync', 'index2']
     }),
     // new HtmlWebpackPlugin({
-    //     template: './src/index3.html',
-    //     filename: 'index3.html',
+    //     template: './src/index3/index.html',
+    //     filename: 'index3/index.html',
     //     hash: true,
-    //     excludeChunks: ['index1', 'index2', 'index3', 'jquery']
-    //     chunks: ['index2']
+    //     chunks: ['index3']
     // }),
     new webpack.HotModuleReplacementPlugin(),
     new ExtractTextPlugin({filename: 'css/[name].optimize.css'}),
@@ -40,7 +39,7 @@ const pluginsConfig = [
         canPrint: true
     }),
     new PurifyCssWebpack({
-        paths: glob.sync(path.join(__dirname, '../src/*.html'))
+        paths: glob.sync(path.join(__dirname, '../src/**/*.html'))
     }),
     new CopyWebpackPlugin([{
         from: path.resolve(__dirname, '../src/assets'),

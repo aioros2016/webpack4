@@ -18,7 +18,7 @@ module.exports = {
     module: loaderRules,
     plugins: pluginsConfig,
     optimization: {
-        runtimeChunk: "single",   //去除build后出口文件中webpack相关代码
+        // runtimeChunk: "single",   //去除build后出口文件中webpack相关代码
         splitChunks: {
             minChunks: 2,   //只有被2个以上组件同时引用的情况下，才会被提取
             minSize: 0,  //提取前该模块只有大于此参数，模块才会被提取
@@ -30,12 +30,12 @@ module.exports = {
                     chunks: 'async',
                     minChunks: 1,
                     name: 'commonsAsync',   //提取的模块名
-                    test: /js/,   //值类型：RegExp、String和Function，在这里匹配正则才会被提取
+                    test: /scripts\//,   //值类型：RegExp、String和Function，在这里匹配正则才会被提取
                 },
                 commons: {
                     chunks: 'initial',
                     name: 'commons',   //提取的模块名
-                    test: /js/,   //值类型：RegExp、String和Function，在这里匹配正则才会被提取
+                    test: /scripts\//,   //值类型：RegExp、String和Function，在这里匹配正则才会被提取
                     priority: 10
                 },
                 // util: {
