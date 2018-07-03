@@ -25,6 +25,7 @@ const rules = {
                     loader: 'url-loader',
                     options: {
                         limit: 8192,
+                        name: '[name]-v[hash:8].[ext]',
                         outputPath: 'images'
                     }
                 }

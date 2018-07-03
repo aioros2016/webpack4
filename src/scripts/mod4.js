@@ -1,3 +1,6 @@
+// import util1 from '../util/util1.js'
+import jQuery from 'jquery'
+
 const com4 = (txt) => {
     console.log('这是模块4'+ txt)
 }

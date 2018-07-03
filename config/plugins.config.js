@@ -14,14 +14,12 @@ const pluginsConfig = [
         template: './src/index1/index.html',
         filename: 'index1/index.html',
         hash: true,
-        // excludeChunks: ['index2']
         chunks: ['runtime', 'commons', 'commonsAsync', 'index1']
     }),
     new HtmlWebpackPlugin({
         template: './src/index2/index.html',
         filename: 'index2/index.html',
         hash: true,
-        // excludeChunks: ['index1', 'index2', 'index3']
         chunks: ['runtime', 'commons', 'jquery', 'commonsAsync', 'index2']
     }),
     // new HtmlWebpackPlugin({
